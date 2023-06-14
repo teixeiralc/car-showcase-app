@@ -1,5 +1,5 @@
 import { CarCatalogue, CarCatalogueHeader, Hero } from '@/components';
-import { fetchApi } from '@/utils';
+import { fetchApi } from '@/utils/api';
 
 export default async function Home() {
   const carsData = [
