@@ -1,10 +1,21 @@
 import { MouseEventHandler } from 'react';
 
+type TButtonIcon = {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  fill?: boolean;
+};
 export interface IButtonProps {
   children: React.ReactNode;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
   containerStyles?: string;
+  textStyles?: string;
+  leftIcon?: TButtonIcon;
+  rightIcon?: TButtonIcon;
   type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
 }
 
 export interface ISearchManufacturerProps {
