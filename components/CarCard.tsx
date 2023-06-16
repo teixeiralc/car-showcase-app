@@ -19,12 +19,12 @@ const CarCard = ({ car }: { car: TCar }) => {
           {make} {model}
         </h2>
       </div>
-      <p className="flex mt-6 text-3xl font-extrabold">
+      <p className="mt-6 flex text-3xl font-extrabold">
         <span className="self-start text-sm font-semibold">$</span>
         {carRent}
         <span className="self-end text-sm font-medium">/day</span>
       </p>
-      <div className="relative w-full h-40 my-3 object-contain">
+      <div className="relative my-3 h-40 w-full object-contain">
         <Image
           src="/hero.png"
           alt={`${make} ${model} photo `}
@@ -34,7 +34,7 @@ const CarCard = ({ car }: { car: TCar }) => {
         />
       </div>
 
-      <div className="relative flex justify-between w-full mt-2">
+      <div className="relative mt-2 flex w-full justify-between">
         <div className="car-card__icon-container">
           <div className="car-card__icon">
             <Image src="/steering-wheel.svg" width={20} height={20} alt="" />

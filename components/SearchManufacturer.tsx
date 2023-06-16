@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import { useState, Fragment } from 'react';
-import { Combobox, Transition } from '@headlessui/react';
-import { ISearchManufacturerProps } from '@/types';
-import { manufacturers } from '@/utils/constants';
-import Image from 'next/image';
+import { useState, Fragment } from 'react'
+import { Combobox, Transition } from '@headlessui/react'
+import { ISearchManufacturerProps } from '@/types'
+import { manufacturers } from '@/utils/constants'
+import Image from 'next/image'
 
 const SearchManufacturer = ({
   manufacturer,
   setManufacturer,
 }: ISearchManufacturerProps) => {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState('')
 
   const filteredManufacturers =
     query === ''
@@ -19,8 +19,8 @@ const SearchManufacturer = ({
           item
             .toLowerCase()
             .replace(/\s+/g, '')
-            .includes(query.toLowerCase().replace(/\s+/g, ''))
-        );
+            .includes(query.toLowerCase().replace(/\s+/g, '')),
+        )
 
   return (
     <div className="search-autocompleteInput">
@@ -64,7 +64,7 @@ const SearchManufacturer = ({
                     key={item}
                     value={item}
                     className={({ active }) =>
-                      `relative search-autocompleteInput__option ${
+                      `search-autocompleteInput__option relative ${
                         active ? 'bg-primary-blue text-white' : 'text-gray-900'
                       }`
                     }
@@ -95,7 +95,7 @@ const SearchManufacturer = ({
         </div>
       </Combobox>
     </div>
-  );
-};
+  )
+}
 
-export default SearchManufacturer;
+export default SearchManufacturer

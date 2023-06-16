@@ -1,10 +1,10 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import SearchManufacturer from './SearchManufacturer';
+import { useState } from 'react'
+import SearchManufacturer from './SearchManufacturer'
 
 const SearchBar = () => {
-  const [manufacturer, setManufacturer] = useState('');
+  const [manufacturer, setManufacturer] = useState('')
 
   function handleSearch() {}
 
@@ -17,7 +17,7 @@ const SearchBar = () => {
         />
       </div>
     </form>
-  );
-};
+  )
+}
 
-export default SearchBar;
+export default SearchBar

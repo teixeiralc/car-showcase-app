@@ -1,14 +1,14 @@
-'use client';
+'use client'
 
-import Image from 'next/image';
-import Button from './Button';
+import Image from 'next/image'
+import Button from './Button'
 
 const Hero = () => {
-  const handleScroll = () => {};
+  const handleScroll = () => {}
 
   return (
     <section className="hero">
-      <div className="flex-1 pt-36 padding-x">
+      <div className="padding-x flex-1 pt-36">
         <h1 className="hero__title">
           Find, book, or rent a car — quick and super easy!
         </h1>
@@ -37,7 +37,7 @@ const Hero = () => {
         <div className="hero__image-overlay" />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero
