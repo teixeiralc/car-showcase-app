@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import Image from 'next/image';
-import { IButtonProps } from '@/types';
+import { IButtonProps } from '@/types'
+import Image from 'next/image'
 
 const Button = ({
   containerStyles,
@@ -46,7 +46,7 @@ const Button = ({
         </div>
       )}
     </button>
-  );
-};
+  )
+}
 
-export default Button;
+export default Button

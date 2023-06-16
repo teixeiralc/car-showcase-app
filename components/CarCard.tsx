@@ -1,16 +1,16 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import Image from 'next/image';
-import { TCar } from '@/types';
-import { calculateCarRent } from '@/utils';
-import Button from './Button';
+import { useState } from 'react'
+import Image from 'next/image'
+import { TCar } from '@/types'
+import { calculateCarRent } from '@/utils'
+import Button from './Button'
 
 const CarCard = ({ car }: { car: TCar }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { city_mpg, year, make, model, drive, transmission } = car;
+  const [isOpen, setIsOpen] = useState(false)
+  const { city_mpg, year, make, model, drive, transmission } = car
 
-  const carRent = calculateCarRent(city_mpg, year);
+  const carRent = calculateCarRent(city_mpg, year)
 
   return (
     <div className="car-card group">
@@ -68,7 +68,7 @@ const CarCard = ({ car }: { car: TCar }) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CarCard;
+export default CarCard

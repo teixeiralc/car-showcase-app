@@ -1,5 +1,5 @@
-import { CarCatalogue, CarCatalogueHeader, Hero } from '@/components';
-import { fetchApi } from '@/utils';
+import { CarCatalogue, CarCatalogueHeader, Hero } from '@/components'
+import { fetchApi } from '@/utils'
 
 export default async function Home() {
   const carsData = [
@@ -45,7 +45,7 @@ export default async function Home() {
       transmission: 'a',
       year: 1993,
     },
-  ];
+  ]
 
   // const carsData = {
   //   message: 'Error',
@@ -54,7 +54,7 @@ export default async function Home() {
   // const carsData = await fetchApi();
 
   const isDataEmpty =
-    !Array.isArray(carsData) || carsData.length < 1 || !carsData;
+    !Array.isArray(carsData) || carsData.length < 1 || !carsData
 
   return (
     <main className="overflow-hidden">
@@ -62,5 +62,5 @@ export default async function Home() {
       <CarCatalogueHeader />
       <CarCatalogue carsData={carsData} isDataEmpty={isDataEmpty} />
     </main>
-  );
+  )
 }

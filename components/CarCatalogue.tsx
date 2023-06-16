@@ -1,23 +1,23 @@
-import { ICarCatalogueProps, TCar } from '@/types';
-import CarCard from './CarCard';
+import { ICarCatalogueProps, TCar } from '@/types'
+import CarCard from './CarCard'
 
 const CarCatalogue = ({ carsData, isDataEmpty }: ICarCatalogueProps) => {
   function isDataValid(value: unknown): value is TCar {
     if (value && typeof value === 'object' && 'make' in value) {
-      return true;
+      return true
     } else {
-      return false;
+      return false
     }
   }
 
-  const isCarsDataValid = isDataValid(carsData[0]);
+  const isCarsDataValid = isDataValid(carsData[0])
 
   return (
     <>
       {!isDataEmpty && isCarsDataValid ? (
         <section className="home__cars-wrapper">
-          {carsData.map((car) => (
-            <CarCard car={car} />
+          {carsData.map((car, i) => (
+            <CarCard key={i} car={car} />
           ))}
         </section>
       ) : (
@@ -27,7 +27,7 @@ const CarCatalogue = ({ carsData, isDataEmpty }: ICarCatalogueProps) => {
         </div>
       )}
     </>
-  );
-};
+  )
+}
 
-export default CarCatalogue;
+export default CarCatalogue
