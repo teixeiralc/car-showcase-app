@@ -21,7 +21,7 @@ const Button = ({
       onClick={handleClick}
     >
       {leftIcon && (
-        <div className="relative w-6 h-6">
+        <div className="relative h-6 w-6">
           <Image
             src={leftIcon.src}
             alt={leftIcon.alt}
@@ -34,7 +34,7 @@ const Button = ({
       )}
       <span className={`flex-1 ${textStyles}`}>{children}</span>
       {rightIcon && (
-        <div className="relative w-6 h-6">
+        <div className="relative h-6 w-6">
           <Image
             src={rightIcon.src}
             alt={rightIcon.alt}

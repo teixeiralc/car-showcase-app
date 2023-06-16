@@ -22,7 +22,7 @@ const CarCatalogue = ({ carsData, isDataEmpty }: ICarCatalogueProps) => {
         </section>
       ) : (
         <div className="home__error-container">
-          <h2 className="text-black text-xl font-bold">No results</h2>
+          <h2 className="text-xl font-bold text-black">No results</h2>
           <p>{carsData?.message}</p>
         </div>
       )}
