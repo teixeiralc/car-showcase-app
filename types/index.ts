@@ -25,7 +25,7 @@ export interface ISearchManufacturerProps {
 
 // Car data types
 
-export type TCar = {
+export type TCarAPI = {
   city_mpg: number
   class: string
   combination_mpg: number
@@ -34,6 +34,21 @@ export type TCar = {
   drive: string
   fuel_type: string
   highway_mpg: number
+  make: string
+  model: string
+  transmission: string
+  year: number
+}
+
+export type TCar = {
+  cityMpg: number
+  class: string
+  combinationMpg: number
+  cylinders: number
+  displacement: number
+  drive: string
+  fuelType: string
+  highwayMpg: number
   make: string
   model: string
   transmission: string

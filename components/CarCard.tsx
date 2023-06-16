@@ -8,9 +8,9 @@ import Button from './Button'
 
 const CarCard = ({ car }: { car: TCar }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const { city_mpg, year, make, model, drive, transmission } = car
+  const { cityMpg, year, make, model, drive, transmission } = car
 
-  const carRent = calculateCarRent(city_mpg, year)
+  const carRent = calculateCarRent(cityMpg, year)
 
   return (
     <div className="car-card group">
@@ -48,7 +48,7 @@ const CarCard = ({ car }: { car: TCar }) => {
           </div>
           <div className="car-card__icon">
             <Image src="/gas.svg" width={20} height={20} alt="" />
-            <p className="car-card__icon-text">{city_mpg} MPG</p>
+            <p className="car-card__icon-text">{cityMpg} MPG</p>
           </div>
         </div>
 

@@ -1,9 +1,9 @@
-export const calculateCarRent = (city_mpg: number, year: number) => {
+export const calculateCarRent = (cityMpg: number, year: number) => {
   const basePricePerDay = 50 // dollars
   const mileageFactor = 0.1 // mile
   const ageFactor = 0.05 // year
 
-  const mileageRate = city_mpg * mileageFactor
+  const mileageRate = cityMpg * mileageFactor
   const ageRate = (new Date().getFullYear() - year) * ageFactor
 
   const rentalRatePerDay = basePricePerDay + mileageRate + ageRate

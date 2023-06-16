@@ -1,5 +1,6 @@
 import { CarCatalogue, CarCatalogueHeader, Hero } from '@/components'
 import { fetchApi } from '@/utils'
+import normalizeCarData from '@/utils/normalizeCarData'
 
 export default async function Home() {
   const carsData = [
@@ -45,7 +46,7 @@ export default async function Home() {
       transmission: 'a',
       year: 1993,
     },
-  ]
+  ].map(normalizeCarData)
 
   // const carsData = {
   //   message: 'Error',
