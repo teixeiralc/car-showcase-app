@@ -5,7 +5,7 @@ import Button from './Button'
 const Nav = () => {
   return (
     <header className="absolute z-10 w-full">
-      <nav className="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-4 sm:px-16">
+      <nav className="max-width flex items-center justify-between px-6 py-4 sm:px-16">
         <Link href="/" className="flex items-center justify-center">
           <Image
             src="/logo.svg"

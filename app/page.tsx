@@ -1,5 +1,5 @@
 import { CarCatalogue, CarCatalogueHeader, Hero } from '@/components'
-import { fetchApi } from '@/utils'
+// import { fetchApi } from '@/utils'
 import normalizeCarData from '@/utils/normalizeCarData'
 
 export default async function Home() {
@@ -60,8 +60,10 @@ export default async function Home() {
   return (
     <main className="overflow-hidden">
       <Hero />
-      <CarCatalogueHeader />
-      <CarCatalogue carsData={carsData} isDataEmpty={isDataEmpty} />
+      <section>
+        <CarCatalogueHeader />
+        <CarCatalogue carsData={carsData} isDataEmpty={isDataEmpty} />
+      </section>
     </main>
   )
 }

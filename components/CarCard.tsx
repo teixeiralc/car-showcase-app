@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { TCar } from '@/types'
 import { calculateCarRent } from '@/utils'
 import Button from './Button'
+import CarDetails from './CarDetails'
 
 const CarCard = ({ car }: { car: TCar }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -67,6 +68,12 @@ const CarCard = ({ car }: { car: TCar }) => {
           </Button>
         </div>
       </div>
+
+      <CarDetails
+        isOpen={isOpen}
+        closeModal={() => setIsOpen(false)}
+        car={car}
+      />
     </div>
   )
 }
