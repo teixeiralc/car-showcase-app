@@ -1,4 +1,4 @@
-import { fetchApi } from './api';
-import { calculateCarRent } from './calculateCarRent';
+import { fetchApi } from './api'
+import { calculateCarRent } from './calculateCarRent'
 
-export { fetchApi, calculateCarRent };
+export { fetchApi, calculateCarRent }
