@@ -2,7 +2,7 @@ const url = 'https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=toyota'
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': `${process.env.customKey}`,
+    'X-RapidAPI-Key': `${process.env.API_KEY}`,
     'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com',
   },
 }
