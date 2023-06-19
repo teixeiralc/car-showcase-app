@@ -27,7 +27,7 @@ const CarCard = ({ car }: { car: TCar }) => {
       </p>
       <div className="relative my-3 h-40 w-full object-contain">
         <Image
-          src="/hero.png"
+          src="/tesla.png"
           alt={`${make} ${model} photo `}
           fill
           priority

@@ -26,13 +26,13 @@ const SearchManufacturer = ({
     <div className="search-autocompleteInput">
       <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="relative w-full">
-          <Combobox.Button className="absolute top-[14px]">
+          <Combobox.Button className="absolute top-[16px]">
             <Image
               src="/car-logo.svg"
               width={20}
               height={20}
               className="ml-4"
-              alt="Car manufacturer logo"
+              alt=""
             />
           </Combobox.Button>
 

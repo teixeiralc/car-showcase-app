@@ -10,11 +10,14 @@ const CarCatalogue = ({ carsData, isDataEmpty }: ICarCatalogueProps) => {
     }
   }
 
-  const isCarsDataValid = isDataValid(carsData[0])
+  let isCarsDataValid
+  if (carsData) {
+    isCarsDataValid = isDataValid(carsData[0])
+  }
 
   return (
     <>
-      {!isDataEmpty && isCarsDataValid ? (
+      {carsData && !isDataEmpty && isCarsDataValid ? (
         <section className="home__cars-wrapper padding-x max-width">
           {carsData.map((car, i) => (
             <CarCard key={i} car={car} />

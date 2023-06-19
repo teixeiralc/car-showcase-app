@@ -55,7 +55,17 @@ export type TCar = {
   year: number
 }
 
+export type TCarsData = (TCar[] & { message?: string }) | null
+
 export interface ICarCatalogueProps {
-  carsData: TCar[] & { message?: string }
+  carsData: TCarsData
   isDataEmpty: boolean
+}
+
+export interface IFilterProps {
+  manufacturer: string
+  year: number
+  fuel: string
+  limit: number
+  model: string
 }

@@ -1,8 +1,9 @@
 import { CarCatalogue, CarCatalogueHeader, Hero } from '@/components'
-// import { fetchApi } from '@/utils'
+import { TCar } from '@/types'
+import { fetchCarDataApi } from '@/utils'
 import normalizeCarData from '@/utils/normalizeCarData'
 
-export default async function Home() {
+export default async function Home({ searchParams }) {
   const carsData = [
     {
       city_mpg: 23,
@@ -48,11 +49,15 @@ export default async function Home() {
     },
   ].map(normalizeCarData)
 
-  // const carsData = {
-  //   message: 'Error',
-  // };
+  if (!searchParams) return null
 
-  // const carsData = await fetchApi();
+  // const carsData = await fetchCarDataApi<TCar[]>({
+  //   manufacturer: searchParams.manufacturer || '',
+  //   year: searchParams.year || 2023,
+  //   fuel: searchParams.fuel || '',
+  //   limit: searchParams.limit || 10,
+  //   model: searchParams.model || '',
+  // })
 
   const isDataEmpty =
     !Array.isArray(carsData) || carsData.length < 1 || !carsData

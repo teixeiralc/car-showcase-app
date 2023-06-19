@@ -58,8 +58,8 @@ const CarDetails = ({ isOpen, closeModal, car }: ICarDetailsProps) => {
                   <div className="flex flex-1 flex-col gap-3">
                     <div className="relative h-40 w-full rounded-lg bg-pattern bg-cover bg-center">
                       <Image
-                        src="/hero.png"
-                        alt={`${make} ${model} photo `}
+                        src="/tesla.png"
+                        alt={`${make} ${model} photo`}
                         fill
                         priority
                         className="object-contain"
@@ -69,7 +69,7 @@ const CarDetails = ({ isOpen, closeModal, car }: ICarDetailsProps) => {
                     <div className="flex gap-3">
                       <div className="relative h-24 w-full flex-1 rounded-lg bg-primary-blue-100">
                         <Image
-                          src="/hero.png"
+                          src="/tesla.png"
                           alt={`${make} ${model} photo `}
                           fill
                           priority
@@ -79,7 +79,7 @@ const CarDetails = ({ isOpen, closeModal, car }: ICarDetailsProps) => {
 
                       <div className="relative h-24 w-full flex-1 rounded-lg bg-primary-blue-100">
                         <Image
-                          src="/hero.png"
+                          src="/tesla.png"
                           alt={`${make} ${model} photo `}
                           fill
                           priority
@@ -89,7 +89,7 @@ const CarDetails = ({ isOpen, closeModal, car }: ICarDetailsProps) => {
 
                       <div className="relative h-24 w-full flex-1 rounded-lg bg-primary-blue-100">
                         <Image
-                          src="/hero.png"
+                          src="/tesla.png"
                           alt={`${make} ${model} photo `}
                           fill
                           priority
