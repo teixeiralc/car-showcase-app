@@ -63,9 +63,23 @@ export interface ICarCatalogueProps {
 }
 
 export interface IFilterProps {
-  manufacturer: string
-  year: number
-  fuel: string
-  limit: number
-  model: string
+  manufacturer?: string
+  year?: number
+  fuel?: string
+  limit?: number
+  model?: string
+}
+
+export interface ISearchParamsProps {
+  searchParams: IFilterProps
+}
+
+interface ICarCatalogueHeaderFilterOptionProps {
+  title: string
+  value: string
+}
+
+export interface ICarCatalogueHeaderFilterProps {
+  title: string
+  options: ICarCatalogueHeaderFilterOptionProps[]
 }

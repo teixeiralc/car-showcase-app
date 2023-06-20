@@ -1,3 +1,4 @@
+import { fuels, yearsOfProduction } from '@/utils/constants'
 import Filter from './Filter'
 import SearchBar from './SearchBar'
 
@@ -11,8 +12,8 @@ const CarCatalogueHeader = () => {
       <div className="home__filters">
         <SearchBar />
         <div className="home__filter-container">
-          <Filter title="fuel" />
-          <Filter title="year" />
+          <Filter title="fuel" options={fuels} />
+          <Filter title="year" options={yearsOfProduction} />
         </div>
       </div>
     </div>
