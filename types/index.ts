@@ -71,7 +71,6 @@ export interface ISearchParams {
   fuel?: string
   limit?: number
   model?: string
-  pageNumber?: number
 }
 
 export interface ISearchParamsProps {
