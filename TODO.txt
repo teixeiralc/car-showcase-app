@@ -1,0 +1,3 @@
+TODO:
+  Refactor types
+  Create a context to store hard coded informations (limit of cars per page in the catalogue)

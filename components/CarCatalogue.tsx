@@ -1,7 +1,12 @@
 import { ICarCatalogueProps, TCar } from '@/types'
 import CarCard from './CarCard'
+import ShowMore from './ShowMore'
 
-const CarCatalogue = ({ carsData, isDataEmpty }: ICarCatalogueProps) => {
+const CarCatalogue = ({
+  carsData,
+  isDataEmpty,
+  searchParams,
+}: ICarCatalogueProps) => {
   function isDataValid(value: unknown): value is TCar {
     if (value && typeof value === 'object' && 'make' in value) {
       return true
@@ -18,11 +23,17 @@ const CarCatalogue = ({ carsData, isDataEmpty }: ICarCatalogueProps) => {
   return (
     <>
       {carsData && !isDataEmpty && isCarsDataValid ? (
-        <section className="home__cars-wrapper padding-x max-width">
-          {carsData.map((car, i) => (
-            <CarCard key={i} car={car} />
-          ))}
-        </section>
+        <div className="padding-x max-width">
+          <div className="home__cars-wrapper">
+            {carsData.map((car, i) => (
+              <CarCard key={i} car={car} />
+            ))}
+          </div>
+          <ShowMore
+            pageNumber={(searchParams.limit || 10) / 10}
+            isNext={(searchParams.limit || 10) > carsData.length}
+          />
+        </div>
       ) : (
         <div className="home__error-container">
           <h2 className="text-xl font-bold text-black">No results</h2>
