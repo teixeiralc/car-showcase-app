@@ -3,9 +3,18 @@
 import { Fragment, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Listbox, Transition } from '@headlessui/react'
-import { ICarCatalogueHeaderFilterProps } from '@/types'
-import { UpdateSearchParams } from '@/utils'
 import Image from 'next/image'
+import { UpdateSearchParams } from '@/utils'
+
+interface ICarCatalogueHeaderFilterOptionProps {
+  title: string
+  value: string
+}
+
+export interface ICarCatalogueHeaderFilterProps {
+  title: string
+  options: ICarCatalogueHeaderFilterOptionProps[]
+}
 
 const transitionStyles = {
   enter: 'transition ease-out duration-100',

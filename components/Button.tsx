@@ -1,7 +1,26 @@
 'use client'
 
-import { IButtonProps } from '@/types'
 import Image from 'next/image'
+
+import { MouseEventHandler, ReactNode } from 'react'
+
+type TButtonIcon = {
+  src: string
+  alt: string
+  width?: number
+  height?: number
+  fill?: boolean
+}
+export interface IButtonProps {
+  children: ReactNode
+  handleClick?: MouseEventHandler<HTMLButtonElement>
+  containerStyles?: string
+  textStyles?: string
+  leftIcon?: TButtonIcon
+  rightIcon?: TButtonIcon
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
+}
 
 const Button = ({
   containerStyles,
