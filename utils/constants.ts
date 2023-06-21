@@ -99,3 +99,5 @@ export const footerLinks = [
     ],
   },
 ]
+
+export const LIMIT_OF_ITEMS_PER_PAGE = 10

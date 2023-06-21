@@ -1,6 +1,7 @@
 import { ICarCatalogueProps, TCar } from '@/types'
 import CarCard from './CarCard'
 import ShowMore from './ShowMore'
+import { LIMIT_OF_ITEMS_PER_PAGE } from '@/utils/constants'
 
 const CarCatalogue = ({
   carsData,
@@ -30,8 +31,13 @@ const CarCatalogue = ({
             ))}
           </div>
           <ShowMore
-            pageNumber={(searchParams.limit || 10) / 10}
-            isNext={(searchParams.limit || 10) > carsData.length}
+            pageNumber={
+              (searchParams.limit || LIMIT_OF_ITEMS_PER_PAGE) /
+              LIMIT_OF_ITEMS_PER_PAGE
+            }
+            isNext={
+              (searchParams.limit || LIMIT_OF_ITEMS_PER_PAGE) > carsData.length
+            }
           />
         </div>
       ) : (
